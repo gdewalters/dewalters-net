@@ -6,31 +6,30 @@ eleventyExcludeFromCollections: true
 eleventyNavigation:
   key: Home
   order: 1
-numberOfLatestPostsToShow: 3
+numberOfLatestPostsToShow: 6
 ---
-{% set postsCount = collections.posts | length %}
-{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
-
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
-{% include "partials/11ty-postslist.njk" %}
-
-{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
-{% endif %}
-
 <section class="section is-flex-grow-1">
   <div class="container">
 
     <div class="columns is-variable is-5-desktop is-multiline is-mobile">
-      {% for item in pagination.items | reverse %}
-        <div class="column is-one-third-tablet is-full-mobile mb-5">
-          {% include "partials/card.njk" %}
-        </div>
-      {% endfor %}
+        {% set postsCount = collections.posts | length %}
+        {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
+
+        {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+        {% set postslistCounter = postsCount %}
+
+        {% include "partials/article-card.njk" %}
+        
     </div>
+
+    {% set morePosts = postsCount - numberOfLatestPostsToShow %}
+    {% if morePosts > 0 %}
+    <div class="columns">
+      <div class="column has-text-centered">
+        <p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
+      </div>
+    </div>
+    {% endif %}  
 
   </div>
 </section>
