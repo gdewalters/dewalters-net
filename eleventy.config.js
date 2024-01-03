@@ -10,6 +10,16 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const pluginDrafts = require("./eleventy.config.drafts.js");
 const pluginImages = require("./eleventy.config.images.js");
 
+// -----------------------------------------------------------------
+// Once theme constants
+// -----------------------------------------------------------------
+
+// Clean-css
+const CleanCSS = require("clean-css");
+
+// PurgeCss
+const purgeCssPlugin = require("eleventy-plugin-purgecss");
+
 module.exports = function(eleventyConfig) {
 	// Copy the contents of the `public` folder to the output folder
 	// For example, `./public/css/` ends up in `_site/css/`
@@ -92,6 +102,25 @@ module.exports = function(eleventyConfig) {
 		});
 	});
 
+	// -----------------------------------------------------------------
+	// Begin Once-specific config options
+	// -----------------------------------------------------------------	
+		
+	eleventyConfig.addFilter("cssmin", function (code) {
+		return new CleanCSS({}).minify(code).styles;
+	});
+
+	eleventyConfig.addPlugin(purgeCssPlugin, {
+		// Optional: Specify the location of your PurgeCSS config
+		config: "./purgecss.config.js",
+		// Optional: Set quiet: true to suppress terminal output
+		quiet: false,
+	});
+
+	// -----------------------------------------------------------------
+	// End Once-specific config options
+	// -----------------------------------------------------------------	
+
 	// Features to make your build faster (when you need them)
 
 	// If your passthrough copy gets heavy and cumbersome, add this line
@@ -136,4 +165,5 @@ module.exports = function(eleventyConfig) {
 		// folder name and does **not** affect where things go in the output folder.
 		pathPrefix: "/",
 	};
+
 };

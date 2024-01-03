@@ -8,8 +8,7 @@ module.exports = {
 		name: "Gareth de Walters",
 		email: "gareth@dewalters.net",
 		url: "https://dewalters.net/about/"
-	}
-
+	},
 	logoUrl: "/img/once.png",
 	search: true,
 	showCookiesAdvice: false,

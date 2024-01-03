@@ -1,0 +1,9 @@
+---
+permalink: /css/dewalters-theme.css
+eleventyExcludeFromCollections: true
+---
+{% set css %}
+  {% include "css/bulma.css" %}
+  {% include "css/custom.css" %}
+{% endset %}
+{{ css | cssmin | safe }}
