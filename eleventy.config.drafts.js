@@ -42,7 +42,7 @@ module.exports = eleventyConfig => {
 
 		// Only log once.
 		if(!logged) {
-			console.log( `[11ty/eleventy-base-blog] ${text} drafts.` );
+			console.log( `[gdewalters/dewalters-net] ${text} drafts.` );
 		}
 
 		logged = true;

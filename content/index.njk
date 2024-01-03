@@ -1,28 +1,33 @@
 ---
-layout: layouts/core.njk
+layout: layouts/base.njk
+title: Once eleventy Theme - Demo
+description: This is a description of Once Eleventy Theme
+eleventyExcludeFromCollections: true
+pagination:
+  data: collections.orderByDate
+  size: 9
 eleventyNavigation:
   key: Home
   order: 1
 numberOfLatestPostsToShow: 3
 ---
-{% set postsCount = collections.posts | length %}
-{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
 
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
-{% include "11ty-postslist.njk" %}
+<section class="section is-flex-grow-1">
+  <div class="container">
 
-{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
-{% endif %}
+    <div class="columns is-variable is-5-desktop is-multiline is-mobile">
+      {% for item in pagination.items | reverse %}
+        <div class="column is-one-third-tablet is-full-mobile mb-5">
+          {% include "partials/card.njk" %}
+        </div>
+      {% endfor %}
+    </div>
 
-{# List every content page in the project #}
-{#
-<ul>
-	{%- for entry in collections.all %}
-	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-	{%- endfor %}
-</ul>
-#}
+    <div class="columns">
+      <div class="column has-text-centered">
+        {% include "partials/pagination.njk" %}
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -195,6 +195,62 @@ module.exports = function(eleventyConfig) {
     })
     /* --- Social Icons --- */
 
+    // Formato de Fecha
+    const { DateTime } = require("luxon");
+    eleventyConfig.addFilter("postDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj).setLocale('es').toLocaleString(DateTime.DATE_SHORT);
+    });
+
+    // Número de caracteres para Card
+    eleventyConfig.addFilter('descriptionLength', function(text) {
+        let resultado
+        text === undefined ? resultado = '' : resultado = String(text).slice(0, 70) + '...';
+        return resultado
+    });
+
+    //Order Post by Date
+    eleventyConfig.addCollection("orderByDate", function(collectionApi) {
+        return collectionApi.getAll().sort(function(a, b) {
+          return b.date - a.date;
+        });
+    });
+
+    // Artículos relacionados
+    eleventyConfig.addFilter('relacionados', function(collection, etiquetas, path, limite) {
+
+        const filtrados = new Set();
+
+        collection.map(item => {
+            for (etiqueta of etiquetas) {
+                // console.log(item.data.tags.length)
+                if (item.data.tags && item.data.tags.includes(etiqueta)) {
+                    filtrados.add(item)
+                }
+            }
+        })
+
+        // Eliminar Post Actual
+        for (item of filtrados) {
+            if (item.data.page.inputPath == path) {
+                filtrados.delete(item)
+            }
+        }
+
+        // Limitar el número de Articulos y que sean aleatorios
+        let articulosFiltrados = Array.from(filtrados)
+        if(articulosFiltrados.length <= limite) {
+            return articulosFiltrados
+        }
+
+        do {
+            let indice = Math.floor(Math.random()*articulosFiltrados.length)
+            articulosFiltrados.splice((indice - 1), 1)
+
+        } while (articulosFiltrados.length > limite)
+
+        return articulosFiltrados
+
+    })	
 
 	// -----------------------------------------------------------------
 	// End Once-specific config options

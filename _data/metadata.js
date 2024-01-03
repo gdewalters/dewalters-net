@@ -33,7 +33,7 @@ module.exports = {
 	  },
 	  {
 		anchor: "Contact",
-		url: "#"
+		url: "/contact/"
 	  }
 	],
 	navbarButtons: [
