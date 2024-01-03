@@ -5,8 +5,8 @@ description: Mauris non purus fermentum lectus facilisis egestas in sit amet ris
 featuredImage: /img/06.jpg
 date: 2021-12-29
 tags:
-  - Egestas
-  - Commodo
+  - egestas
+  - commodo
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla risus, efficitur ullamcorper molestie feugiat, congue ac ligula. Donec sit amet pharetra elit. Maecenas cursus et ligula ac volutpat. Fusce pharetra convallis sagittis. Donec ipsum augue, sagittis sed tortor non, rhoncus semper erat. Aliquam placerat convallis risus quis porttitor. Etiam interdum bibendum fringilla. Proin sed metus ut tellus feugiat fringilla. Donec nec ligula id quam lacinia pretium. Pellentesque quis justo ultrices, tincidunt dui eu, tempor nulla.

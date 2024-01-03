@@ -5,8 +5,8 @@ description: This is a post on My Blog about touchpoints and circling wagons.
 featuredImage: /img/06.jpg
 date: 2023-12-30
 tags:
-  - Fermentum
-  - Commodo
+  - fermentum
+  - commodo
 ---
 
 # Title H1

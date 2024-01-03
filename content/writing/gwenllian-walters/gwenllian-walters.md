@@ -5,7 +5,7 @@ standFirst: On 22 September 1888, a young woman gave birth to her illegitimate s
 featuredImage: ./walters-gwenllian-birth-registration.png
 date: 2020-05-11
 tags:
-  - Ancestry
+  - ancestry
 ---
 I’ve researched my family history for many years. Much of the time, money and effort I’ve devoted to the exercise has been focused on resolving the mystery of what happened to my Great Grandmother Gwenllian. Unfortunately, I’m no nearer to discovering where she went after registering the birth of her son (my paternal grandfather).
 
