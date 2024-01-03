@@ -4,12 +4,12 @@
       <div class="level-left">
         <div class="level-item">
           <p class="has-text-centered-mobile">
-            <span class="has-text-weight-bold has-text-light has-text-grey-light">{{ config.title }}</span>
-            {% if config.footerLinks.length > 0%}
+            <span class="has-text-weight-bold has-text-light has-text-grey-light">{{ metadata.title }}</span>
+            {% if metadata.footerLinks.length > 0%}
               <span class="mr-5 is-hidden-mobile"></span>
               <br class="is-hidden-desktop">
               {% set guion = joiner('-') %}
-              {% for item in config.footerLinks %}
+              {% for item in metadata.footerLinks %}
                 {{ guion() }} <a class="has-text-white" href="{{ item.url }}">{{ item.anchor }}</a>
               {% endfor %}
             {% endif%}
@@ -19,20 +19,20 @@
       <div class="level-right">
         <div class="level-item">
           <p class="footer-social-icons">
-            {% if config.social.facebook.length > 0 %}
-              <span><a href="{{ config.social.facebook }}" rel="nofollow noreferrer" target="_blank" aria-label="facebook profile link"><span class="icon">{% facebookLightIcon %}</span></a></span>
+            {% if metadata.social.facebook.length > 0 %}
+              <span><a href="{{ metadata.social.facebook }}" rel="nofollow noreferrer" target="_blank" aria-label="facebook profile link"><span class="icon">{% facebookLightIcon %}</span></a></span>
             {% endif %}
-            {% if config.social.twitter.length > 0 %}
-              <span><a href="{{ config.social.twitter }}" rel="nofollow noreferrer" target="_blank" aria-label="twitter profile link"><span class="icon">{% twitterLightIcon %}</span></a></span>
+            {% if metadata.social.twitter.length > 0 %}
+              <span><a href="{{ metadata.social.twitter }}" rel="nofollow noreferrer" target="_blank" aria-label="twitter profile link"><span class="icon">{% twitterLightIcon %}</span></a></span>
             {% endif %}
-            {% if config.social.pinterest.length > 0 %}
-              <span><a href="{{ config.social.pinterest }}" rel="nofollow noreferrer" target="_blank" aria-label="pinterest profile link"><span class="icon">{% pinterestLightIcon %}</span></a></span>
+            {% if metadata.social.pinterest.length > 0 %}
+              <span><a href="{{ metadata.social.pinterest }}" rel="nofollow noreferrer" target="_blank" aria-label="pinterest profile link"><span class="icon">{% pinterestLightIcon %}</span></a></span>
             {% endif %}
-            {% if config.social.instagram.length > 0 %}
-              <span><a href="{{ config.social.instagram }}" rel="nofollow noreferrer" target="_blank" aria-label="instagram profile link"><span class="icon">{% instagramLightIcon %}</span></a></span>
+            {% if metadata.social.instagram.length > 0 %}
+              <span><a href="{{ metadata.social.instagram }}" rel="nofollow noreferrer" target="_blank" aria-label="instagram profile link"><span class="icon">{% instagramLightIcon %}</span></a></span>
             {% endif %}
-            {% if config.social.github.length > 0 %}
-              <span><a href="{{ config.social.github }}" rel="nofollow noreferrer" target="_blank" aria-label="github profile link"><span class="icon">{% githubLightIcon %}</span></a></span>
+            {% if metadata.social.github.length > 0 %}
+              <span><a href="{{ metadata.social.github }}" rel="nofollow noreferrer" target="_blank" aria-label="github profile link"><span class="icon">{% githubLightIcon %}</span></a></span>
             {% endif %}
           </p>
         </div>
@@ -41,9 +41,9 @@
   </div>
 </footer>
 
-{% if config.showCookiesAdvice %}
-  {% if config.googleAnalyticsID.length > 0 %}
-    <script> var analyticsID = "{{ config.googleAnalyticsID }}"</script>
+{% if metadata.showCookiesAdvice %}
+  {% if metadata.googleAnalyticsID.length > 0 %}
+    <script> var analyticsID = "{{ metadata.googleAnalyticsID }}"</script>
   {% endif %}
   {% include "partials/cookies-advice.njk" %}
 {% endif %}
@@ -51,7 +51,7 @@
 <!-- Scripts -->
 {% set js %}
   {% include "js/scripts.js" %}
-  {% if config.showCookiesAdvice %}
+  {% if metadata.showCookiesAdvice %}
     {% include "js/cookies-advice-script.js" %}
   {% endif %}
 {% endset %}
