@@ -2,16 +2,15 @@
 title: Once
 ---
 
-{% include "head.njk" %}
+{% include "partials/head.njk" %}
 
-<body class="is-flex is-flex-direction-column">
-  {% include "nav.njk" %}
+  <body class="is-flex is-flex-direction-column">
+    {% include "partials/nav.njk" %}
 
-  {% topIndexAd %}
+    {% topIndexAd %}
 
-  {{ content | safe }}
+    {{ content | safe }}
 
-  {% include "footer.njk" %}
-</body>
-
+    {% include "partials/footer.njk" %}
+  </body>
 </html>

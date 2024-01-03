@@ -45,14 +45,14 @@
   {% if config.googleAnalyticsID.length > 0 %}
     <script> var analyticsID = "{{ config.googleAnalyticsID }}"</script>
   {% endif %}
-  {% include "cookies-advice.njk" %}
+  {% include "partials/cookies-advice.njk" %}
 {% endif %}
 
 <!-- Scripts -->
 {% set js %}
-  {% include "scripts.js" %}
+  {% include "js/scripts.js" %}
   {% if config.showCookiesAdvice %}
-    {% include "cookies-advice-script.js" %}
+    {% include "js/cookies-advice-script.js" %}
   {% endif %}
 {% endset %}
 <script>
