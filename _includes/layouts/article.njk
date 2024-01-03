@@ -16,7 +16,7 @@ featuredImage: /img/default.jpg
       </div>
 
       <article class="container articulo">
-        <header class=" container has-text-centered">
+        <header class=" container has-text-left">
           {% if config.showDate %}
             <p class="mb-1"><time class="has-text-grey-dark is-size-7">Published: {{ page.date | postDate }}</time></p>
           {% endif %}
@@ -56,10 +56,9 @@ featuredImage: /img/default.jpg
       </article>
     </main>
 
-    {% if config.showRelatedPosts %}
+    {% if metadata.showRelatedPosts %}
       {% include "partials/related-articles.njk" %}
     {% endif %}
-
 
     {% include "partials/footer.njk" %}
   </body>

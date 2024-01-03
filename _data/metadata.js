@@ -53,5 +53,5 @@ module.exports = {
 	showShareButtons: true,
 	showDate: true,
 	showRelatedPosts: true,
-	relatedPostsTitle: "Related Posts"
+	relatedPostsTitle: "Related articles"
 }
