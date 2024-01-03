@@ -1,14 +1,13 @@
 ---
-title: This is a fifth post (draft)
+title: This is a sixth post 
 description: This is a post on My Blog about touchpoints and circling wagons.
-#permalink: /fifth-post/
-featuredImage: /img/05.jpg
-date: 2023-01-23
+#permalink: /sixth-post/
+featuredImage: /img/06.jpg
+date: 2023-12-30
 tags:
-  - second tag
-draft: true
+  - Fermentum
+  - Commodo
 ---
-This is a draft post
 
 # Title H1
 ## Title H2

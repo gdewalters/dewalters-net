@@ -3,14 +3,23 @@ layout: layouts/base.njk
 title: Once eleventy Theme - Demo
 description: This is a description of Once Eleventy Theme
 eleventyExcludeFromCollections: true
-pagination:
-  data: collections.orderByDate
-  size: 9
 eleventyNavigation:
   key: Home
   order: 1
 numberOfLatestPostsToShow: 3
 ---
+{% set postsCount = collections.posts | length %}
+{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
+<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
+
+{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+{% set postslistCounter = postsCount %}
+{% include "partials/11ty-postslist.njk" %}
+
+{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+{% if morePosts > 0 %}
+<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
+{% endif %}
 
 <section class="section is-flex-grow-1">
   <div class="container">
@@ -21,12 +30,6 @@ numberOfLatestPostsToShow: 3
           {% include "partials/card.njk" %}
         </div>
       {% endfor %}
-    </div>
-
-    <div class="columns">
-      <div class="column has-text-centered">
-        {% include "partials/pagination.njk" %}
-      </div>
     </div>
 
   </div>
