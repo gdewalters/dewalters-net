@@ -1,5 +1,6 @@
 ---
 title: Not found
+numberOfLatestPostsToShow: 3
 ---
 
   {% include "partials/head.njk" %}
@@ -18,22 +19,36 @@ title: Not found
             </div>
         </div>
 
-        <div class="section">
+        <div class="section pt-3">
+
             <div class="container">
+
+                <div class="has-text-centered my-0">
+                    <h3 class="subtitle is-4 py-3">{{ 404ConversionMessage }}</h3>
+                </div>
+
                 <div class="columns is-variable is-5 is-multiline is-mobile">
                     {# Lastest 3 articles #}
-                    {%- for item in collections.all | reverse -%}
-                    {% if loop.index0 < 3 %}
-                    <div class="column is-one-third-tablet is-full-mobile mb-5">
-                        {% include "partials/card.njk" %}
-                    </div>
-                    {% endif %}
-                    {%- endfor -%}
+                    
+                    {% set postsCount = collections.posts | length %}
+
+                    {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+                    {% set postslistCounter = postsCount %}
+
+                    {%- css %}.postlist { counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }} }{% endcss %}              
+                    
+                    {% for post in postslist | reverse %}
+                    {% include "partials/card.njk" %}
+                    {% endfor %}
+
                 </div>
+
             </div>
+
         </div>
 
     {% include "partials/footer.njk" %}
+
   </body>
 
 </html>

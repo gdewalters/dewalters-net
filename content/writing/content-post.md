@@ -1,5 +1,5 @@
 ---
-title: This is a sixth post 
+title: This is a major content post 
 description: Etiam ut risus sagittis, posuere mi at, congue dui. Sed in turpis ut felis bibendum blandit non sit amet ipsum. Etiam mattis metus sed felis cursus ultricies
 #permalink: /bulma-css/
 featuredImage: /img/06.jpg

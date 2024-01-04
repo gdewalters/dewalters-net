@@ -1,18 +1,22 @@
-<div class="tarjeta">
+                    <div class="column is-one-third-tablet is-full-mobile mb-5">
 
-  <figure class="image is-5by3">
-    <a href="{{ post.url }}">
-      <img src="{{post.data.featuredImage}}" alt="{{post.data.title}}" loading="lazy">
-    </a>
-  </figure>
+                        <div class="tarjeta">
 
-  <div class="p-3">
-    {% set comma = joiner() %}
-    {% for tag in post.data.tags %}
-      {{ comma() }} <a href="/tags/{{ tag }}" class="is-uppercase is-size-7 has-text-grey-dark">{{ tag }}</a>
-    {% endfor %}
-    <h3 class="tarjeta-title mt-0 mb-4 is-size-4 has-text-weight-bold has-text-grey-dark"><a href="{{ post.url }}" class="has-text-dark">{{ post.data.title }}</a></h3>
-    <p class="has-text-grey-dark">{{ post.data.description | descriptionLength }}</p>
-  </div>
+                            <figure class="image is-5by3">
+                                <a href="{{ post.url }}">
+                                <img src="{{post.data.featuredImage}}" alt="{{post.data.title}}" loading="lazy">
+                                </a>
+                            </figure>
 
-</div>
+                            <div class="p-3">
+                                {% set comma = joiner() %}
+                                {% for tag in post.data.tags %}
+                                {{ comma() }} <a href="/tags/{{ tag }}" class="is-uppercase is-size-7 has-text-grey-dark">{{ tag }}</a>
+                                {% endfor %}
+                                <h3 class="tarjeta-title mt-0 mb-4 is-size-4 has-text-weight-bold has-text-grey-dark"><a href="{{ post.url }}" class="has-text-dark">{{ post.data.title }}</a></h3>
+                                <p class="has-text-grey-dark">{{ post.data.description | descriptionLength }}</p>
+                            </div>
+
+                        </div>
+                        
+                    </div>
