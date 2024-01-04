@@ -14,10 +14,8 @@ eleventyComputed:
   title: Tagged “{{ tag }}”
 permalink: /tags/{{ tag | slugify }}/
 ---
-
 <section class="section is-flex-grow-1">
   <div class="container">
-
     <div class="columns is-multiline is-mobile">
       <div class="column is-full mb-3">
         <div class="columns is-vcentered is-mobile">
@@ -31,13 +29,12 @@ permalink: /tags/{{ tag | slugify }}/
           </div>
         </div>
       </div>
-      {% set postslist = collections[ tag ] %}
-      {% for post in postlist | reverse %}
+        {% set postslist = collections[ tag ] %}
+        {% for post in postslist | reverse %}
         <div class="column is-one-third-tablet is-full-mobile">
-          {% include "partials/card.njk" %}
+          {% include "partials/card.njk" %}         
         </div>
-      {% endfor %}
+        {% endfor %} 
     </div>
-
   </div>
 </section>
