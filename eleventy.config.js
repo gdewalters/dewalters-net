@@ -193,6 +193,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addNunjucksShortcode("mailIcon", function() {
         return `<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.88em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 448 512"><path d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM178.117 262.104C87.429 196.287 88.353 196.121 64 177.167V152c0-13.255 10.745-24 24-24h272c13.255 0 24 10.745 24 24v25.167c-24.371 18.969-23.434 19.124-114.117 84.938c-10.5 7.655-31.392 26.12-45.883 25.894c-14.503.218-35.367-18.227-45.883-25.895zM384 217.775V360c0 13.255-10.745 24-24 24H88c-13.255 0-24-10.745-24-24V217.775c13.958 10.794 33.329 25.236 95.303 70.214c14.162 10.341 37.975 32.145 64.694 32.01c26.887.134 51.037-22.041 64.72-32.025c61.958-44.965 81.325-59.406 95.283-70.199z" fill="#666666"/></svg>`
     })
+	eleventyConfig.addNunjucksShortcode("blueskyIcon", function() {
+        return `<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.88em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 64 57"><path fill="#0085ff" d="M13.873 3.805C21.21 9.332 29.103 20.537 32 26.55v15.882c0-.338-.13.044-.41.867-1.512 4.456-7.418 21.847-20.923 7.944-7.111-7.32-3.819-14.64 9.125-16.85-7.405 1.264-15.73-.825-18.014-9.015C1.12 23.022 0 8.51 0 6.55 0-3.268 8.579-.182 13.873 3.805ZM50.127 3.805C42.79 9.332 34.897 20.537 32 26.55v15.882c0-.338.13.044.41.867 1.512 4.456 7.418 21.847 20.923 7.944 7.111-7.32 3.819-14.64-9.125-16.85 7.405 1.264 15.73-.825 18.014-9.015C62.88 23.022 64 8.51 64 6.55c0-9.818-8.578-6.732-13.873-2.745Z"></path></svg>`
+    })
     /* --- Social Icons --- */
 
     // Formato de Fecha
@@ -214,6 +217,8 @@ module.exports = function(eleventyConfig) {
           return b.date - a.date;
         });
     });
+
+	eleventyConfig.addShortcode("currentYear", () => `${new Date().getFullYear()}`);
 
     // Artículos relacionados
     eleventyConfig.addFilter('relacionados', function(collection, etiquetas, path, limite) {

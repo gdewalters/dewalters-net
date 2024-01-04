@@ -4,7 +4,7 @@
       <div class="level-left">
         <div class="level-item">
           <p class="has-text-centered-mobile">
-            <span class="has-text-weight-bold has-text-light has-text-grey-light">{{ metadata.title }}</span>
+            <span class="has-text-weight-bold has-text-light has-text-grey-light">&copy; <time datetime="2004-09-22">2004</time>-<time>{% currentYear %}</time> - {{ metadata.title }}</span>
             {% if metadata.footerLinks.length > 0%}
               <span class="mr-5 is-hidden-mobile"></span>
               <br class="is-hidden-desktop">
@@ -19,20 +19,47 @@
       <div class="level-right">
         <div class="level-item">
           <p class="footer-social-icons">
+            {% if metadata.social.bluesky.length > 0 %}
+              <span>
+                <a href="{{ metadata.social.bluesky }}" rel="nofollow noreferrer" target="_blank" aria-label="bluesky profile link">
+                  <span class="icon">{% blueskyIcon %}</span>
+                </a>
+              </span>
+            {% endif %}
             {% if metadata.social.facebook.length > 0 %}
-              <span><a href="{{ metadata.social.facebook }}" rel="nofollow noreferrer" target="_blank" aria-label="facebook profile link"><span class="icon">{% facebookLightIcon %}</span></a></span>
+              <span>
+                <a href="{{ metadata.social.facebook }}" rel="nofollow noreferrer" target="_blank" aria-label="facebook profile link">
+                  <span class="icon">{% facebookLightIcon %}</span>
+                </a>
+              </span>
             {% endif %}
             {% if metadata.social.twitter.length > 0 %}
-              <span><a href="{{ metadata.social.twitter }}" rel="nofollow noreferrer" target="_blank" aria-label="twitter profile link"><span class="icon">{% twitterLightIcon %}</span></a></span>
+              <span>
+                <a href="{{ metadata.social.twitter }}" rel="nofollow noreferrer" target="_blank" aria-label="twitter profile link">
+                  <span class="icon">{% twitterLightIcon %}</span>
+                </a>
+              </span>
             {% endif %}
             {% if metadata.social.pinterest.length > 0 %}
-              <span><a href="{{ metadata.social.pinterest }}" rel="nofollow noreferrer" target="_blank" aria-label="pinterest profile link"><span class="icon">{% pinterestLightIcon %}</span></a></span>
+              <span>
+                <a href="{{ metadata.social.pinterest }}" rel="nofollow noreferrer" target="_blank" aria-label="pinterest profile link">
+                  <span class="icon">{% pinterestLightIcon %}</span>
+                </a>
+              </span>
             {% endif %}
             {% if metadata.social.instagram.length > 0 %}
-              <span><a href="{{ metadata.social.instagram }}" rel="nofollow noreferrer" target="_blank" aria-label="instagram profile link"><span class="icon">{% instagramLightIcon %}</span></a></span>
+              <span>
+                <a href="{{ metadata.social.instagram }}" rel="nofollow noreferrer" target="_blank" aria-label="instagram profile link">
+                  <span class="icon">{% instagramLightIcon %}</span>
+                </a>
+              </span>
             {% endif %}
             {% if metadata.social.github.length > 0 %}
-              <span><a href="{{ metadata.social.github }}" rel="nofollow noreferrer" target="_blank" aria-label="github profile link"><span class="icon">{% githubLightIcon %}</span></a></span>
+              <span>
+                <a href="{{ metadata.social.github }}" rel="nofollow noreferrer" target="_blank" aria-label="github profile link">
+                  <span class="icon">{% githubLightIcon %}</span>
+                </a>
+              </span>
             {% endif %}
           </p>
         </div>

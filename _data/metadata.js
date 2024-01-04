@@ -18,23 +18,31 @@ module.exports = {
 	googleAnalyticsID: "",
 	footerLinks: [
 	  {
-		anchor: "Legal Advice",
-		url: "#"
+		anchor: "Contact",
+		url: "/contact/"
 	  },
 	  {
-		anchor: "Cookies Advice",
-		url: "#"
+		anchor: "Colophon",
+		url: "/colophon/"
+	  },
+	  {
+		anchor: "RSS",
+		url: "/feed/feed.xml"
 	  }
 	],
 	navbarMenu: [
-	  {
-		anchor: "About",
-		url: "/about/"
-	  },
-	  {
-		anchor: "Contact",
-		url: "/contact/"
-	  }
+		{
+			anchor: "Writing",
+			url: "/writing/"
+		},
+	  	{
+			anchor: "Genealogy",
+			url: "/genealogy/"
+	  	},
+	  	{
+			anchor: "About",
+			url: "/about/"
+	  	}
 	],
 	navbarButtons: [
 	  {
@@ -44,11 +52,12 @@ module.exports = {
 	  }
 	],
 	social: {
-	  facebook: "https://facebook.com",
-	  twitter: "https://twitter.com",
-	  pinterest: "https://pinterest.com",
-	  instagram: "https://instagram.com",
-	  github: "https://github.com"
+	  bluesky: "https://bsky.app/profile/gdewalters.bsky.social",
+	  facebook: "",
+	  twitter: "http://twitter.com/gdewalters/",
+	  pinterest: "",
+	  instagram: "https://instagram.com/gdewalters/",
+	  github: "https://github.com/gdewalters/"
 	},
 	showShareButtons: true,
 	showDate: true,
