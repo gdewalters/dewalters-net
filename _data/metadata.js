@@ -6,11 +6,14 @@ module.exports = {
 	description: "I am writing about my experiences as a [...].",
 	author: {
 		name: "Gareth de Walters",
+		occupation: "Website manage and producer",
 		email: "gareth@dewalters.net",
-		url: "https://dewalters.net/about/"
+		personalUrl: "https://dewalters.net/about/",
+		personalWebsite: "https://dewalters.net/"
 	},
-	logoUrl: "/img/once.png",
+	logoUrl: "",
 	search: false,
+	share: false,
 	showCookiesAdvice: false,
 	cookiesAdviceText: "Cookies advice text",
 	cookiesAdviceMoreInfoAnchor: "More Info",

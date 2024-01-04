@@ -6,7 +6,7 @@
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
-      <a class="navbar-item" href="{{ metadata.url }}">
+      <div class="navbar-item">
         {% if metadata.logoUrl.length > 0 %}
           {#
             Si logo desde fichero: <img src="{{ metadata.logoUrl }}" alt="{{ metadata.title }}"/>
@@ -14,16 +14,22 @@
           #}
           <img src="{{ metadata.logoUrl }}" alt="{{ metadata.title }}"/>
         {% else %}
-          {{ metadata.title }}
+        <ul id="" class="">
+					<li class="">
+            <a href="{{ metadata.author.personalWebsite }}" rel="me" class="">
+            <strong class="underlined p-name">{{ metadata.author.name }}</strong><br>{{ metadata.author.occupation }}
+            </a>
+          </li>
+        </ul>
         {% endif %}
-      </a>
-      <!--
+      </div>
+      {% if metadata.share === true %}
       <a id="share-mobile" href="#" class="navbar-item is-hidden-desktop ml-auto mr-2" aria-label="share button for mobile">
         <span class="icon">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="currentColor"><path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/></g></svg>
         </span>
       </a>
-      -->
+      {% endif %}
       {% if metadata.search === true %}
         <!-- <div id="search-mobile" class="navbar-item is-hidden-desktop mr-3"> -->
         <div id="search-mobile" class="navbar-item is-hidden-desktop ml-auto mr-3">
