@@ -6,7 +6,7 @@ module.exports = {
 	description: "I am writing about my experiences as a [...].",
 	author: {
 		name: "Gareth de Walters",
-		occupation: "Website manage and producer",
+		occupation: "Website manager and producer",
 		email: "gareth@dewalters.net",
 		personalUrl: "https://dewalters.net/about/",
 		personalWebsite: "https://dewalters.net/"
