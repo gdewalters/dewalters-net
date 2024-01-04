@@ -7,7 +7,24 @@
     <title>{{ title }}</title>
     <meta name="description" content="{{ description or site.description }}">
 
-    <link rel="stylesheet" href="{{ '/css/dewalters-theme.css' | url }}">
+    <!-- DNS Prefetch: Current domain and any external resources, eg: fonts -->
+    <link rel="dns-prefetch" href="{{ metadata.url }}">
+
+    <!-- Preload: CSS and JS -->
+    <link rel="preload" href="{{ '/css/dewalters-theme.css' | url }}" as="style">
+
+    <!-- Me -->
+    <meta name="author" content="{{ metadata.author.name }}" />
+    <link href="mailto:{{ metadata.author.email }}" rel="me">
+    <link href="sms:+491776546175" rel="me" />
+    <link href="https://twitter.com/m_ott" rel="me">
+    <link href="https://www.xing.com/profile/Matthias_Ott9" rel="me">
+    <link href="https://de.linkedin.com/in/matthiasott" rel="me">
+    <link href="https://github.com/matthiasott" rel="me">
+    <link href="https://www.instagram.com/matthiasott/" rel="me">
+    <link href="https://mastodon.social/@matthiasott" rel="me">
+
+
     <link rel="icon" type="image/png" href="/img/favicon.png" sizes="32x32">
 
     {% if layout === 'post.njk' or layout === 'post-minimal.njk' %}
@@ -30,6 +47,7 @@
 
     {% endif %}
 
+    <link href="{{ '/css/dewalters-theme.css' | url }}" rel="stylesheet">
     {# {% set css %}
       {% include "custom.css" %}
     {% endset %}
