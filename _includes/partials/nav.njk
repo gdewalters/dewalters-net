@@ -43,7 +43,7 @@
             <a class="navbar-item navigation-item" href="{{item.url}}">{{item.anchor}}</a>
         {% endfor %}
 
-        {% if metadata.navbarButtons.length > 0 %}
+        {% if enableNavbarButtons === true and metadata.navbarButtons.length > 0 %}
           <div class="navbar-item">
             <div class="buttons">
               {% for item in metadata.navbarButtons %}

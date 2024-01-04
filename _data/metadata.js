@@ -10,7 +10,7 @@ module.exports = {
 		url: "https://dewalters.net/about/"
 	},
 	logoUrl: "/img/once.png",
-	search: true,
+	search: false,
 	showCookiesAdvice: false,
 	cookiesAdviceText: "Cookies advice text",
 	cookiesAdviceMoreInfoAnchor: "More Info",
@@ -44,6 +44,7 @@ module.exports = {
 			url: "/about/"
 	  	}
 	],
+	enableNavbarButtons: false,	
 	navbarButtons: [
 	  {
 		anchor: "Suscribe",

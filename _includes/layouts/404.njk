@@ -1,0 +1,39 @@
+---
+title: Not found
+---
+
+  {% include "partials/head.njk" %}
+
+  <body>
+
+    {% include "partials/nav.njk" %}
+
+        <div class="section">
+            <div class="container">
+                <div class="has-text-centered my-6">
+                    <h1 class="title is-1 is-spaced">{{ title }}</h1>
+                    <h2 class="subtitle is-4">{{ 404Message }}</h2>
+                    <a href="/" class="button">{{ 404ButtonText }}</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <div class="columns is-variable is-5 is-multiline is-mobile">
+                    {# Lastest 3 articles #}
+                    {%- for item in collections.all | reverse -%}
+                    {% if loop.index0 < 3 %}
+                    <div class="column is-one-third-tablet is-full-mobile mb-5">
+                        {% include "partials/card.njk" %}
+                    </div>
+                    {% endif %}
+                    {%- endfor -%}
+                </div>
+            </div>
+        </div>
+
+    {% include "partials/footer.njk" %}
+  </body>
+
+</html>
