@@ -4,7 +4,7 @@
             <div class="column is-full">
                 <p class="title is-4 has-text-centered mt-4 mb-4">{{ metadata.relatedPostsTitle }}</p>
             </div>
-            {%- for item in collections.all|relacionados(tags, page.inputPath, 3) -%}
+            {%- for post in collections.all|relacionados(tags, page.inputPath, 3) -%}
                 <div class="column is-full-mobile is-one-third-tablet">
                     {% include "partials/card.njk" %}
                 </div>
@@ -12,3 +12,4 @@
         </div>
     </div>
 </aside>
+

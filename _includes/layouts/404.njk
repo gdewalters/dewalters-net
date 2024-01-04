@@ -38,7 +38,9 @@ numberOfLatestPostsToShow: 3
                     {%- css %}.postlist { counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }} }{% endcss %}              
                     
                     {% for post in postslist | reverse %}
+                    <div class="column is-one-third-tablet is-full-mobile mb-5">
                     {% include "partials/card.njk" %}
+                    </div>
                     {% endfor %}
 
                 </div>
