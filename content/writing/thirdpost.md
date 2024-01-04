@@ -1,6 +1,7 @@
 ---
 title: This is my third post.
 description: This is a post on My Blog about win-win survival strategies.
+description90Chars: Morbi orci sapien, aliquet sed scelerisque sed, molestie at lectus. Mauris non purus ferm.
 #permalink: /third-post/
 featuredImage: /img/03.jpg
 date: 2018-08-24

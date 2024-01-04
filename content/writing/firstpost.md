@@ -1,6 +1,7 @@
 ---
 title: This is my first post.
 description: This is a post on My Blog about agile frameworks.
+description90Chars: Morbi orci sapien, aliquet sed scelerisque sed, molestie at lectus. Mauris non purus ferm.
 #permalink: /first-post/
 featuredImage: /img/01.jpg
 date: 2018-05-01

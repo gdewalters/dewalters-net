@@ -1,6 +1,7 @@
 ---
 title: This is a sixth post 
 description: This is a post on My Blog about touchpoints and circling wagons.
+description90Chars: Morbi orci sapien, aliquet sed scelerisque sed, molestie at lectus. Mauris non purus ferm.
 #permalink: /sixth-post/
 featuredImage: /img/06.jpg
 date: 2023-12-30

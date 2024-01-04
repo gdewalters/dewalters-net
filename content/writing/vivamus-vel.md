@@ -1,6 +1,7 @@
 ---
 title: Vivamus vel tempus urna. Sed imperdiet diam in velit commodo
-description: Mauris non purus fermentum lectus facilisis egestas in sit amet risus. Maecenas sit amet accumsan odio, vitae euismod ipsum. Donec congue ligula ac erat
+description: Mauris non purus fermentum lectus facilisis egestas in sit amet risus. Maecenas sit amet accumsan odio, vitae euismod ipsum. Donec congue ligula ac erat.
+description90Chars: Morbi orci sapien, aliquet sed scelerisque sed, molestie at lectus. Mauris non purus ferm.
 #permalink: /vivamus-vel/
 featuredImage: /img/06.jpg
 date: 2021-12-29

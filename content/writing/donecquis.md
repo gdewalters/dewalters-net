@@ -1,6 +1,7 @@
 ---
 title: Donec is eu justo suscipit eleifend in at mi
-description: Donec quis turpis eu justo suscipit eleifend in at mi. Nulla at lectus molestie, blandit elit eu, eleifend sem. Nunc suscipit tincidunt consectetur
+description: Donec quis turpis eu justo suscipit eleifend in at mi. Nulla at lectus molestie, blandit elit eu, eleifend sem. Nunc suscipit tincidunt consectetur.
+description90Chars: Morbi orci sapien, aliquet sed scelerisque sed, molestie at lectus. Mauris non purus ferm.
 featuredImage: /img/06.jpg
 date: 2022-12-10
 tags:

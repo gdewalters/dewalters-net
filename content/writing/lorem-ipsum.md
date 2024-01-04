@@ -1,6 +1,7 @@
 ---
 title: Lorem ipsum dolor sit amet consectetur adipiscing elit suspen
-description: Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus aliquam lobortis dolor, et suscipit elit suscipit eu
+description: Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus aliquam lobortis dolor, et suscipit elit suscipit eu.
+description90Chars: Morbi orci sapien, aliquet sed scelerisque sed, molestie at lectus. Mauris non purus ferm.
 #permalink: /lorem-ipsum/
 featuredImage: /img/01.jpg
 date: 2022-12-10

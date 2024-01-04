@@ -1,8 +1,10 @@
 ---
 title: Gwenllian Walters - the case of the disappearing great grandmother
+metaTitle60Chars: 
 description: On 22 September 1888, a young woman gave birth to her illegitimate son in the Llanelly Union Workhouse, South Wales. A month and a half later Gwenllian registered the birth —and with that bureaucratic step completed— she then disappeared from the historical record.
-standFirst: On 22 September 1888, a young woman gave birth to her illegitimate son in the Llanelly Union Workhouse, South Wales. A month and a half later Gwenllian registered the birth —and with that bureaucratic step completed— she then disappeared from the historical record.
-featuredImage: ./walters-gwenllian-birth-registration.png
+metaDescription155Chars: 
+description90Chars: Morbi orci sapien, aliquet sed scelerisque sed, molestie at lectus. Mauris non purus ferm.
+featuredImage: /img/tTvX9teHZo-3030.avif
 date: 2020-05-11
 tags:
   - ancestry

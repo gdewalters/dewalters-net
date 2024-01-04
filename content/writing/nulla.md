@@ -1,6 +1,7 @@
 ---
 title: Nulla consequat tellus ac cursus ultricies molestie at lectus
-description: Morbi orci sapien, aliquet sed scelerisque sed, molestie at lectus. Nulla consequat tellus ac cursus ultricies. Suspendisse eu vehicula purus
+description: Morbi orci sapien, aliquet sed scelerisque sed, molestie at lectus. Nulla consequat tellus ac cursus ultricies. Suspendisse eu vehicula purus.
+description90Chars: Morbi orci sapien, aliquet sed scelerisque sed, molestie at lectus. Mauris non purus ferm.
 #permalink: /nulla/
 featuredImage: /img/04.jpg
 date: 2007-06-14

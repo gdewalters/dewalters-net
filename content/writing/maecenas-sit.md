@@ -1,6 +1,7 @@
 ---
 title: Maecenas sit amet accumsan odio, vitae euismod ipsum
 description: Vivamus vel tempus urna. Sed imperdiet diam in velit commodo placerat. Phasellus lacinia vitae mi a efficitur. Etiam in tincidunt dui.
+description90Chars: Morbi orci sapien, aliquet sed scelerisque sed, molestie at lectus. Mauris non purus ferm.
 #permalink: /maecenas-sit/
 featuredImage: /img/02.jpg
 date: 2021-09-17

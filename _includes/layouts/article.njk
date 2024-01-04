@@ -10,15 +10,19 @@ featuredImage: /img/default.jpg
 
       <article class="container articulo">
         <header class=" container has-text-left">
-          <h1 class="title is-1 is-size-3-mobile has-text-weight-bold">{{ title}}</h1>
-          <p class="is-size-5 has-text-grey-dark has-text-weight-light is-family-sans-serif">{{ description }}</p>
+          <h1 class="title is-1 is-size-3-mobile has-text-weight-bold">{{ title }}</h1>
+          <p class="is-size-5 has-text-grey-darker has-text-weight-light is-family-sans-serif">
+            {{ description }}
+          </p>
           <div class="tags is-justify-content-left mt-3">
             {% for tag in tags %}
               <a href="/tags/{{ tag }}" class="tag">{{ tag }}</a>
             {% endfor %}
           </div>
           {% if metadata.showDate %}
-            <p class="mb-1"><time class="has-text-grey-dark is-size-7">Published: {{ page.date | readableDate }}</time></p>
+            <p class="mb-1">
+              <time class="has-text-grey-dark is-size-6">Published: {{ page.date | readableDate }}</time>
+            </p>
           {% endif %}
         </header>
 

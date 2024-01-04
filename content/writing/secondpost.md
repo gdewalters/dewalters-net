@@ -1,6 +1,7 @@
 ---
 title: This is my second post with a much longer title.
 description: This is a post on My Blog about leveraging agile frameworks.
+description90Chars: Morbi orci sapien, aliquet sed scelerisque sed, molestie at lectus. Mauris non purus ferm.
 #permalink: /second-post/
 featuredImage: /img/02.jpg
 date: 2018-07-04
