@@ -39,7 +39,7 @@ numberOfLatestPostsToShow: 6
               <div class="column has-text-centered">
                 {% set morePosts = postsCount - numberOfLatestPostsToShow %}
                 {% if morePosts > 0 %}
-                <p>{{ morePosts }} more articles{% if morePosts != 1 %}s{% endif %} can be found in <a href="/writing/">the archive</a>.</p>
+                <p>{{ morePosts }} more articles{% if morePosts != 1 %}s{% endif %} can be found in <a href="{{ metadata.writingArchiveUrl }}">the archive</a>.</p>
                 {% endif %}
               </div>
           </div>

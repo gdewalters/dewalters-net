@@ -19,6 +19,7 @@ module.exports = {
 	cookiesAdviceMoreInfoAnchor: "More Info",
 	cookiesAdviceMoreInfoUrl: "/cookies/",
 	googleAnalyticsID: "",
+	writingArchiveUrl: "/writing/",
 	footerLinks: [
 	  {
 		anchor: "Contact",
