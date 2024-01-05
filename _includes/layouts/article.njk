@@ -4,9 +4,11 @@ featuredImage: /img/default.jpg
 ---
     <main id="content" class="section is-flex-grow-1">
 
+      {% if topPostAd %}
       <div class="container">
         {% topPostAd %}
       </div>
+      {% endif %}
 
       <article class="container articulo">
         <header class=" container has-text-left">
@@ -15,8 +17,8 @@ featuredImage: /img/default.jpg
             {{ description }}
           </p>
           <div class="tags is-justify-content-left mt-3">
-            {% for tag in tags %}
-              <a href="/tags/{{ tag }}" class="tag">{{ tag }}</a>
+            {% for tag in tags | filterTagList %}
+              <a href="/topic/{{ tag }}" class="tag">{{ tag }}</a>
             {% endfor %}
           </div>
           {% if metadata.showDate %}

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
 
     <title>{{ metaTitle60Chars }}</title>
     <meta name="description" content="{{ description or site.description }}">
@@ -28,6 +28,10 @@
 
 
     <link rel="icon" type="image/png" href="/img/favicon.png" sizes="32x32">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png"/>
 
     {% if layout === 'post.njk' or layout === 'post-minimal.njk' %}
       <meta property="og:site_name" content="{{metadata.title}}" />

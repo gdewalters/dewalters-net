@@ -1,6 +1,6 @@
 ---
-layout: layouts/page.njk
-title: Once eleventy Theme - Demo
+layout: layouts/section.njk
+title: Genealogy
 metaTitle60Chars: Once eleventy Theme - Demo
 description: This is a description of Once Eleventy Theme
 metaDescription155Chars: This is a description of Once Eleventy Theme

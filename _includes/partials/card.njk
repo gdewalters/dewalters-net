@@ -8,9 +8,9 @@
 
                             <div class="p-3">
                                 {% set comma = joiner() %}
-                                {% for tag in post.data.tags %}
-                                {{ comma() }} <a href="/tags/{{ tag }}" class="is-uppercase is-size-7 has-text-grey-dark">{{ tag }}</a>
-                                {% endfor %}
+                                {%- for tag in post.data.tags | filterTagList %}
+                                {{ comma() }} <a href="/topic/{{ tag }}" class="is-uppercase is-size-7 has-text-grey-dark">{{ tag }}</a>
+                                {%- endfor %}
                                 <h3 class="tarjeta-title mt-0 mb-4 is-size-4 has-text-weight-bold has-text-grey-dark">
                                     <a href="{{ post.url }}" class="has-text-dark">{{ post.data.title }}</a>
                                 </h3>

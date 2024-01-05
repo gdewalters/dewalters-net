@@ -36,15 +36,19 @@ module.exports = {
 	],
 	navbarMenu: [
 		{
-			anchor: "Writing",
+			anchor: "01 Home",
+			url: "/"
+		},
+		{
+			anchor: "02 Writing",
 			url: "/writing/"
 		},
 	  	{
-			anchor: "Genealogy",
+			anchor: "03 Genealogy",
 			url: "/genealogy/"
 	  	},
 	  	{
-			anchor: "About",
+			anchor: "04 About",
 			url: "/about/"
 	  	}
 	],

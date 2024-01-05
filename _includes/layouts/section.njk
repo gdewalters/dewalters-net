@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+---
+    <main id="content" class="section is-flex-grow-1">
+
+      {% if topPostAd %}
+      <div class="container">
+        {% topPostAd %}
+      </div>
+      {% endif %}
+
+      <article class="container articulo">
+
+        <header class=" container has-text-left">
+
+          <h1 class="title is-1 is-size-3-mobile has-text-weight-bold">
+            {{ title }}
+          </h1>
+
+          <p class="is-size-5 has-text-grey-darker has-text-weight-light is-family-sans-serif">
+            {{ description }}
+          </p>
+
+        </header>
+
+        <div class="is-flex">
+
+          <div class="articulo-content content mb-0 pt-3 pt-5">
+
+            {{ content | safe }}
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </main>

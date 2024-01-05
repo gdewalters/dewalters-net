@@ -1,5 +1,5 @@
 ---
-layout: layouts/tag.njk
+layout: layouts/topic.njk
 title: Once eleventy Theme - Demo
 metaTitle60Chars: Once eleventy Theme - Demo
 description: This is a description of Once Eleventy Theme
@@ -16,7 +16,7 @@ pagination:
   addAllPagesToCollections: true
 eleventyComputed:
   title: Tagged “{{ tag }}”
-permalink: /tags/{{ tag | slugify }}/
+permalink: /topic/{{ tag | slugify }}/
 ---
 {% set postslist = collections[ tag ] %}
 {% set postsCount = collections[ tag ] | length %}
@@ -36,7 +36,7 @@ permalink: /tags/{{ tag | slugify }}/
         <div class="column is-full" style="padding-left: 0;">
 
             <p class="is-size-3 has-text-grey-dark is-family-sans-serif">
-            Here are {{ postsCount }} posts related to the topic “{{ tag | capitalize }}”. But hey, if there’s nothing here that’s interesting to you, check out the <a href="{{ metadata.writingArchiveUrl }}">full archive of my writing</a>.
+            Here are {{ postsCount }} articles related to the topic “{{ tag | capitalize }}”. But hey, if there’s nothing here that’s interesting to you, check out the <a href="{{ metadata.writingArchiveUrl }}">full archive of my writing</a>.
             </p>
         </div>
 

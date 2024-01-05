@@ -1,10 +1,12 @@
 ---
-layout: layouts/11ty-home.njk
+layout: layouts/section.njk
+title: Writing
+metaTitle60Chars: Section meta title
+description: The Welsh used from the early 15th century until the end of the 16th century is known as Early Modern Welsh. It is the language of the poetry of Dafydd ap Gwilym, one of the leading Welsh poets of the Middle Ages.
+metaDescription155Chars: Section page description - Mae hi'n hanner awr wedi un ar ddeg
 eleventyNavigation:
-  key: Archive
+  key: Writing
   order: 2
 ---
-<h1>Archive</h1>
-
 {% set postslist = collections.posts %}
-{% include "partials/11ty-postslist.njk" %}
+{% include "partials/writing-list.njk" %}
