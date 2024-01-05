@@ -7,6 +7,7 @@ module.exports = {
 	author: {
 		name: "Gareth de Walters",
 		occupation: "Website manager and producer",
+		expertise: "Enterprise content management, Web production, UX",
 		email: "gareth@dewalters.net",
 		personalUrl: "https://dewalters.net/about/",
 		personalWebsite: "https://dewalters.net/"
@@ -66,7 +67,8 @@ module.exports = {
 	  twitter: "http://twitter.com/gdewalters/",
 	  pinterest: "",
 	  instagram: "https://instagram.com/gdewalters/",
-	  github: "https://github.com/gdewalters/"
+	  github: "https://github.com/gdewalters/",
+	  linkedin: "https://nz.linkedin.com/in/gdewalters/"	  
 	},
 	showShareButtons: true,
 	showDate: true,

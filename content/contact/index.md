@@ -1,6 +1,6 @@
 ---
-layout: layouts/page.njk
-title: Once eleventy Theme - Demo
+layout: layouts/section.njk
+title: Contact
 metaTitle60Chars: Once eleventy Theme - Demo
 description: This is a description of Once Eleventy Theme
 metaDescription155Chars: This is a description of Once Eleventy Theme
@@ -8,6 +8,10 @@ eleventyNavigation:
   key: Contact
   order: 3
 ---
-# Contact me
+## Contact me
 
-I have worked as a web designer, product designer, and front-end developer. I want to improve at what I do. I created this site to practice and learn—practice the fundamentals of web design and learn more web development. I also wanted to share my work. Over time I plan to add more design, illustration, and art to this site.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

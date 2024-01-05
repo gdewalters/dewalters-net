@@ -6,9 +6,7 @@
   Dark - Raisan black: #262626
   Light - Lemon meringue: #FAF0CA
   Highlight - #AED1F2;
-  Favicon: https://thenounproject.com/TheRainingTeal/uploads/?i=18683
 */
-
 
 /* General */
 html {
@@ -18,6 +16,31 @@ html {
 
 body {
   min-height: 100vh;
+}
+
+/* Links */
+
+a {
+  color: #E4383F;
+  cursor: pointer;
+  text-decoration:none
+}
+
+a strong {
+  color:currentColor
+}
+
+a:hover {
+  color:#262626
+}
+
+/* Lists */
+
+ul.is-unstyled,
+ol.is-unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Fonts */

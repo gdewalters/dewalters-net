@@ -10,9 +10,8 @@ eleventyNavigation:
 ---
 ## About Me
 
-I have worked as a web designer, product designer, and front-end developer. I want to improve at what I do. I created this site to practice and learn—practice the fundamentals of web design and learn more web development. I also wanted to share my work. Over time I plan to add more design, illustration, and art to this site.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-## Family History
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-Crane of Suffolk, England Coat Of Arms. Argent, a fesse between three crosses crosslet fitchée Guls, crest a crane ppr.
-I created a website of Crain family ancestry as a way to explore my interest in heritage and progeny, and as place to catalog my findings. I learned some interesting things about heraldry—something I knew nothing about. You are most welcome to contact me with any interest.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
