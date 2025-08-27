@@ -1,0 +1,37 @@
+{
+  "name": "dewalters-net",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:js && npx @11ty/eleventy",
+    "build:prod": "cross-env ELEVENTY_ENV=production npm run build:js && cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
+    "build:js": "node _helpers/build-js.js",
+    "build-nocolor": "cross-env NODE_DISABLE_COLORS=1 npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve --quiet",
+    "start:ppe": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy --serve --quiet",
+    "debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
+    "debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
+    "benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
+    "clean": "rm -rf _site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gdewalters/dewalters-net.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gdewalters/dewalters-net/issues"
+  },
+  "homepage": "https://github.com/gdewalters/dewalters-net#readme",
+  "type": "module",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "luxon": "^3.6.1",
+    "autoprefixer": "^10.4.21",
+    "cross-env": "^10.0.0",
+    "esbuild": "^0.25.8"
+  }
+}

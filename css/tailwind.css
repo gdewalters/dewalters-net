@@ -1,0 +1,262 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Define your custom theme properties using @theme */
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+
+  --color-vividcrimson: #c8102e;
+  --color-huntergreen: #33673b;
+
+  --color-background: #ffffff;
+  --color-foreground: #1a1a1a;
+  --color-muted-foreground: #6b6b6b;
+  --color-primary: #1a73e8;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f7f7f7;
+  --color-secondary-foreground: #1a1a1a;
+}
+
+/* Apply Playfair Display to headings within the prose class */
+/* The @tailwindcss/typography plugin generates styles for elements within .prose */
+/* We can override these by targeting the specific elements within .prose */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  font-family: var(--font-serif);
+}
+
+/* ──────────────────────────────────────────────────────────
+   Prose body links (only)
+   - crimson + slight weight + tidy underline
+   - hover/focus: no underline
+   - keyboard focus: accessible ring
+────────────────────────────────────────────────────────── */
+.prose a {
+  color: var(--color-vividcrimson);
+  font-weight: 500; /* slight weight increase */
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: text-decoration 0.2s ease, color 0.2s ease;
+}
+.prose a:hover,
+.prose a:focus {
+  text-decoration: none;
+  color: var(--color-vividcrimson);
+}
+.prose a:focus-visible {
+  outline: none;
+  /* Tailwind-style ring replicated in plain CSS for consistency */
+  box-shadow:
+    0 0 0 2px var(--color-vividcrimson),
+    0 0 0 4px var(--color-background); /* ring-offset */
+  border-radius: 2px;
+}
+
+/* ──────────────────────────────────────────────────────────
+   Refined blockquote styling for .prose
+   - no italics, normalized weight, muted hunter green border
+   - subtle cite treatment with auto em dash
+────────────────────────────────────────────────────────── */
+.prose blockquote {
+  font-style: normal;     /* remove italics */
+  font-weight: 400;       /* normalize weight (plugin default is 500) */
+  color: var(--color-foreground);
+  border-left: 4px solid rgba(51, 103, 59, 0.4); /* muted hunter green */
+  padding-left: 1rem;     /* space between border and text */
+  margin-left: 0;         /* align with prose body */
+  margin-right: 0;
+}
+.prose blockquote cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.875rem; /* smaller than body text */
+  color: var(--color-muted-foreground);
+  font-style: normal;  /* avoid italic default */
+}
+.prose blockquote cite::before {
+  content: "— ";
+}
+
+/* (Optional) If you dislike auto quote marks around blockquotes, uncomment:
+.prose blockquote p:first-of-type::before,
+.prose blockquote p:last-of-type::after { content: none !important; }
+*/
+
+/* ──────────────────────────────────────────────────────────
+   Refined code styles for .prose
+   - block code: light bg, muted green accent, subtle shadow
+   - inline code: faint green tint + hunter green text
+────────────────────────────────────────────────────────── */
+.prose pre {
+  background-color: #f9fafb; /* neutral light bg */
+  color: var(--color-foreground);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875rem; /* sm */
+  line-height: 1.5;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid rgba(51, 103, 59, 0.4); /* muted hunter green */
+  border-radius: 0.375rem; /* rounded-md */
+  overflow-x: auto; /* horizontal scroll when needed */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* subtle lift */
+  -webkit-overflow-scrolling: touch;
+}
+.prose pre code {
+  background: transparent;   /* let <pre> handle bg */
+  padding: 0;                /* avoid double padding */
+  font-size: inherit;        /* match pre size */
+  color: inherit;
+}
+.prose code {
+  background-color: rgba(51, 103, 59, 0.08); /* faint green tint */
+  color: var(--color-huntergreen);
+  font-size: 0.875rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  padding: 0.15em 0.35em;
+  border-radius: 0.25rem; /* rounded */
+}
+
+/* Site custom CSS */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+.article-card {
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Active Navigation Link Styling 
+   We target the `.is-active` class that Nunjucks applies.
+*/
+.nav-link {
+  position: relative;
+  color: var(--color-foreground); /* Default link color (black/foreground) */
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  text-decoration: none; /* Ensure no default underline */
+}
+.nav-link:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  bottom: -4px;
+  left: 0;
+  /* Opaque huntergreen for non-active hover */
+  background-color: rgba(51, 103, 59, 0.2); /* 20% opacity for #33673B */
+  transition: width 0.3s ease;
+}
+.nav-link:hover:after {
+  width: 100%;
+}
+
+/* Active Navigation Link Styling */
+.nav-link.is-active {
+  color: var(--color-foreground);
+  font-weight: 700; /* Bold for emphasis */
+}
+.nav-link.is-active:after {
+  width: 100%;
+  background-color: var(--color-huntergreen);
+  transition: none;
+}
+
+/* Optional: exact page vs. section */
+.nav-link[aria-current="page"] {
+  color: var(--color-foreground);
+  font-weight: 700;
+}
+.nav-link[aria-current="page"]:after {
+  width: 100%;
+  background-color: var(--color-huntergreen);
+  transition: none;
+}
+.nav-link[data-current="section"] {
+  color: var(--color-foreground);
+  font-weight: 600;
+}
+.nav-link[data-current="section"]:after {
+  width: 100%;
+  background-color: rgba(51, 103, 59, 0.8);
+  transition: none;
+}
+
+/* Nav keyboard focus ring (consistent with design language) */
+.nav-link:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px var(--color-huntergreen),
+    0 0 0 4px var(--color-background); /* ring-offset */
+  border-radius: 2px;
+}
+
+/* Animation classes */
+.animate-fade-in { animation: fadeIn 1s ease-out; }
+.animate-scale-in { animation: scaleIn 1.2s ease-out; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Shadow utility */
+.shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+
+/* Screen-reader only */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────────────
+   Components layer: Reusable focus-ring utilities
+   (apply these classes in your HTML as needed)
+
+  In templates, add class="focus-ring-crimson" or class="focus-ring-green" to any 
+  interactive element to reuse the ring treatment. 
+  The .prose a and .nav-link already have the ring baked in via selectors, so there's 
+  no need to add these classes there unless override their colour.
+────────────────────────────────────────────────────────────────────────────────── */
+@layer components {
+  /* Crimson focus ring (use on buttons, links in content, etc.) */
+  .focus-ring-crimson:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 2px var(--color-vividcrimson),
+      0 0 0 4px var(--color-background); /* ring-offset */
+    border-radius: 2px;
+  }
+
+  /* Hunter green focus ring (use on nav, structural elements, etc.) */
+  .focus-ring-green:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 2px var(--color-huntergreen),
+      0 0 0 4px var(--color-background); /* ring-offset */
+    border-radius: 2px;
+  }
+}
